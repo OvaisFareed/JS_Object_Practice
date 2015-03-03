@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="para"></p>
+<script>
+    var star="*";
+     var count=1;
+     var animation=true;
+     var para = document.getElementById("para");
+     /*setInterval(function(){
+     if(animation) {
+     if (count < 10) {
+     increment();
+     }
+     else{
+     animation=false;
+     }
+     }
+     else{
+     if(count > 0){
+     decrement();
+     }
+     else{
+     animation=true;
+     }
+     }
+     },100);
+     function increment(){
+     star+="*";
+     count++;
+     para.innerHTML=star;
+     }
+     function decrement(){
+     count--;
+     star=star.substring(0,count);
+     para.innerHTML=star;
+     }*/
+    var text = "It's going to be World War II";
+    for (var i = 0; i < text.length; i++) {
+        if (text.slice(i, i + 12) === "World War II") {
+            text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
+        }
+    }
+    para.innerHTML=text;
+
+</script>
+</body>
+</html>
